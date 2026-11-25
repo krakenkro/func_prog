@@ -1,0 +1,30 @@
+        забанены: —
+ 0.00 с  post          aruzhan  Всем привет!
+ 0.05 с  censored      erlan    Заходите в ******
+ 0.10 с  post          daniyar  Кто готов к защите?
+ 0.15 с  censored      erlan    **** ****
+ 0.20 с  post          dana     1
+ 0.23 с  post          dana     2
+ 0.25 с  post          dana     3
+ 0.27 с  rate_limited  dana     4
+ 0.31 с  post          erlan    ну и ладно
+ 0.41 с  censored      erlan    ****** лучшее
+ 0.41 с  ban           erlan    3 нарушения → бан на 0.7
+        забанены: ['erlan']
+ 0.47 с  blocked       erlan    почему меня не слышно?
+        [отчёт за 0.5 с] ban: 1, blocked: 1, censored: 3, post: 6, rate_limited: 1
+ 0.52 с  ban           spammer  модератором
+        забанены: ['erlan', 'spammer']
+ 0.57 с  post          aruzhan  Модерация работает
+        [отчёт за 0.5 с] ban: 1, post: 1
+ 1.32 с  unban         erlan    срок бана истёк
+        забанены: ['spammer']
+ 1.32 с  post          erlan    Я исправился
+ 1.38 с  ban           erlan    модератором
+        забанены: ['erlan', 'spammer']
+ 1.43 с  blocked       erlan    эй!
+        [отчёт за 0.5 с] ban: 1, blocked: 1, post: 1, unban: 1
+ 1.53 с  unban         erlan    модератором
+        забанены: ['spammer']
+ 1.58 с  post          erlan    спасибо
+        [отчёт за 0.5 с] post: 1, unban: 1

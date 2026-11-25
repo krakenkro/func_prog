@@ -1,0 +1,68 @@
+Metrics(files=9, sloc=295, functions=31, avg_cc=2.23, max_cc=7, worst='parse_line', mi=63.5, pure=28, state_changes=3, io_sites=2, mutable_globals=0)
+
+__init__.py: сложность функций (radon cc)
+__init__.py: признаки нечистоты (ast)
+
+__main__.py: сложность функций (radon cc)
+__main__.py: признаки нечистоты (ast)
+
+core.py: сложность функций (radon cc)
+  step                     строка   38  CC = 4
+  silences                 строка   62  CC = 4
+  detect                   строка   82  CC = 3
+  run_server               строка   54  CC = 2
+  ServerState              строка   25  CC = 1
+  timeline                 строка   71  CC = 1
+  ordered                  строка   77  CC = 1
+core.py: признаки нечистоты (ast)
+
+model.py: сложность функций (radon cc)
+  Metric                   строка    8  CC = 1
+  Silence                  строка   18  CC = 1
+  Alert                    строка   28  CC = 1
+  Config                   строка   38  CC = 1
+model.py: признаки нечистоты (ast)
+
+parsing.py: сложность функций (radon cc)
+  parse_line               строка   10  CC = 7
+  parse_log                строка   28  CC = 7
+parsing.py: признаки нечистоты (ast)
+  parse_log          38  мутирующий метод: .append()
+  parse_log          40  мутирующий метод: .append()
+  parse_log          42  мутирующий метод: .append()
+
+report.py: сложность функций (radon cc)
+  summarize                строка   24  CC = 6
+  counts_csv               строка   58  CC = 3
+  render                   строка   47  CC = 2
+  ServerStats              строка   14  CC = 1
+  alert_line               строка   36  CC = 1
+  stats_line               строка   41  CC = 1
+report.py: признаки нечистоты (ast)
+
+rules.py: сложность функций (radon cc)
+  cpu_rule                 строка   20  CC = 6
+  mem_rule                 строка   38  CC = 4
+  slow_rule                строка   48  CC = 3
+  push_window              строка   14  CC = 1
+  down_alert               строка   60  CC = 1
+  up_alert                 строка   66  CC = 1
+rules.py: признаки нечистоты (ast)
+
+shell.py: сложность функций (radon cc)
+  main                     строка   20  CC = 4
+  read_lines               строка   41  CC = 1
+  write_text               строка   46  CC = 1
+  run_cli                  строка   51  CC = 1
+shell.py: признаки нечистоты (ast)
+  read_lines         43  ввод-вывод: .read_text()
+  write_text         48  ввод-вывод: .write_text()
+
+streams.py: сложность функций (radon cc)
+  detect_reactive          строка   90  CC = 2
+  at                       строка   37  CC = 1
+  replay                   строка   42  CC = 1
+  silence_events           строка   61  CC = 1
+  server_alerts            строка   69  CC = 1
+  monitor                  строка   81  CC = 1
+streams.py: признаки нечистоты (ast)

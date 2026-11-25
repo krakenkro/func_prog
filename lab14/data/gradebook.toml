@@ -1,0 +1,5 @@
+[report]
+format = "md"
+
+[scale]
+late_penalty = 0.1

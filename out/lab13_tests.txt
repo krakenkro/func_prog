@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/akbota/Desktop/универ/функ.програм
+configfile: pyproject.toml
+plugins: returns-0.30.0, cov-7.1.0, hypothesis-6.170.17
+collected 58 items
+
+tests/test_gradesapp.py ...........
+tests/test_rating.py ...........................
+tests/test_tasks.py ....................
+
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.11.15-final-0 _______________
+
+Name                      Stmts   Miss  Cover
+---------------------------------------------
+gradesapp/__init__.py         6      0   100%
+gradesapp/core.py            14      0   100%
+gradesapp/formatters.py      27      0   100%
+gradesapp/model.py           13      0   100%
+gradesapp/parsing.py          9      0   100%
+gradesapp/pipeline.py        13      0   100%
+gradesapp/shell.py           15      0   100%
+rating/__init__.py            5      0   100%
+rating/core.py               46      0   100%
+rating/loader.py             27      0   100%
+rating/model.py              37      0   100%
+rating/parallel.py            8      0   100%
+rating/parsing.py            23      0   100%
+rating/pipeline.py           15      0   100%
+rating/shell.py              46     14    70%
+rating/source.py             29      0   100%
+---------------------------------------------
+TOTAL                       333     14    96%
+============================== 58 passed in 2.75s ==============================

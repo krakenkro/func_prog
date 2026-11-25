@@ -1,0 +1,23 @@
+=== 1. freeze / set_in / transform / thaw ===
+тип после freeze: PMap PVector
+старая версия: {'db': {'port': 5432, 'host': 'localhost'}, 'services': [{'name': 'api', 'replicas': 2}, {'name': 'web', 'replicas': 1}], 'app': {'name': 'alga', 'debug': False}}
+новая версия:  {'db': {'port': 6543, 'host': 'localhost'}, 'services': [{'name': 'api', 'replicas': 4}, {'name': 'web', 'replicas': 2}], 'app': {'name': 'alga', 'debug': True}}
+неизменённая ветка 'app.name' разделяется: True
+
+=== 2. evolver против set (1000 изменений pvector) ===
+последовательные set: 0.15 мс
+evolver:              0.02 мс (в 6.8 раза быстрее)
+результаты равны: True
+исходный вектор не изменён: True
+
+=== 3. PRecord «Студент» ===
+создан: Student(gpa=3.67, course=2, name='Аружан')
+set возвращает новую запись: Student(gpa=3.67, course=3, name='Аружан') | старая: Student(gpa=3.67, course=2, name='Аружан')
+отказ: {'name': '', 'course': 1, 'gpa': 3.0} -> ('имя не пустое',)
+отказ: {'name': 'Ерлан', 'course': 7, 'gpa': 3.0} -> ('курс от 1 до 4',)
+отказ: {'name': 'Дана', 'course': 1, 'gpa': 5.0} -> ('GPA от 0 до 4',)
+
+=== 4. Неизменяемый граф ===
+BFS g1 из A: ('A', 'B', 'C', 'D', 'E')
+BFS g2 из A: ('A', 'B', 'C', 'D', 'E', 'F')
+g1 не изменился: True

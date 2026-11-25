@@ -1,0 +1,32 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/akbota/Desktop/универ/функ.програм
+configfile: pyproject.toml
+plugins: returns-0.30.0, cov-7.1.0, hypothesis-6.170.17
+collected 39 items
+
+tests/test_analyzer.py .....
+tests/test_characterization.py ............................
+tests/test_properties.py ......
+
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.11.15-final-0 _______________
+
+Name                       Stmts   Miss  Cover   Missing
+--------------------------------------------------------
+analyzer/__init__.py           0      0   100%
+analyzer/metrics.py           44     11    75%   59, 71-79, 83
+analyzer/purity.py            80      0   100%
+legacy/monitor_legacy.py     126      0   100%
+monitor_fp/__init__.py         0      0   100%
+monitor_fp/__main__.py         4      0   100%
+monitor_fp/core.py            42      1    98%   43
+monitor_fp/model.py           27      0   100%
+monitor_fp/parsing.py         29      0   100%
+monitor_fp/report.py          26      0   100%
+monitor_fp/rules.py           30      0   100%
+monitor_fp/shell.py           30      0   100%
+monitor_fp/streams.py         41      0   100%
+--------------------------------------------------------
+TOTAL                        479     12    97%
+============================== 39 passed in 2.17s ==============================

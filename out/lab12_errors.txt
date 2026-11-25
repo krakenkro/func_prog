@@ -1,0 +1,29 @@
+=== retry(3) + catch ===
+seed=0: попыток 1 → ['N 1', 'N 2', 'N 3', 'C']
+seed=1: попыток 2 → ['N 1', 'N 1', 'N 2', 'N 3', 'C']
+seed=4: попыток 3 → ['N 1', 'N 1', 'N 1', 'N 2', 'N 3', 'C']
+seed=149: попыток 3 → ['N 1', 'N 1', 'N 1', 'N резервные данные', 'C']
+
+=== ошибка завершает поток ===
+["N {'id': 1, 'amount': 500}", "E ValueError('сумма должна быть положительной')"]
+
+=== ошибка как значение (Result) ===
+N Ok(value={'id': 1, 'amount': 500})
+N Err(raw='{"id": 2, "amount": -3}', error='ValueError: сумма должна быть положительной')
+N Err(raw='не json', error='JSONDecodeError: Expecting value: line 1 column 1 (char 0)')
+N Err(raw='{"id": 4}', error="KeyError: 'amount'")
+N Ok(value={'id': 5, 'amount': 120})
+C
+сумма корректных платежей: 620
+
+=== мраморные диаграммы (TestScheduler) ===
+retry(3) + catch:
+  неудачная попытка   -1#
+  удачная попытка     -123|
+  резерв              -R|
+  2 сбоя, 3-я успешна -1-1-123|
+  3 сбоя → резерв     -1-1-1-R|
+ошибка в map (o — корректная запись, e — Err):
+  записи              -xxxxx|
+  on_error            -o#
+  Result              -oeeeo|

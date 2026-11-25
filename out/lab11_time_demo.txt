@@ -1,0 +1,4 @@
+interval(10), take 4   10:0, 20:1, 30:2, 40:3, 40:C
+delay(15)              25:f, 35:fu, 45:fun, 115:func, 120:funct, 215:C
+debounce(50)           80:fun, 155:funct, 200:C
+throttle_first(30)     0:1, 30:3, 61:5, 70:C

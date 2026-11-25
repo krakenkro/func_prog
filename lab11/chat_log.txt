@@ -1,0 +1,16 @@
+// формат: #канал | пользователь | текст
+#general | aruzhan | Всем привет!
+#study   | daniyar | Кто сделал лабу по FRP?
+#general | erlan   | Привет, заходите в казино, тут спам
+#study   | aruzhan | Я сделала, scan очень удобен
+#study   | aruzhan | Я сделала, scan очень удобен
+#random  | erlan   | Скидки, КАЗИНО, бонусы
+#general | erlan   | Скидки, КАЗИНО, бонусы
+#study   | daniyar | А как работает combine_latest?
+#random  | dana    |
+#study   | aruzhan | Он берёт последние значения обоих потоков
+#general | dana    | Не будь дураком, Ерлан
+#study   | daniyar | Спасибо!
+#study   | aruzhan | Обращайся
+#general | aruzhan | /stop
+#general | erlan   | это сообщение уже не попадёт в чат

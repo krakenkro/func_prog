@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/akbota/Desktop/универ/функ.програм
+configfile: pyproject.toml
+collected 54 items
+
+test_apps.py ......................                          [ 40%]
+test_operators.py ................................           [100%]
+
+============================== 54 passed in 0.05s ==============================

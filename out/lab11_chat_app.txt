@@ -1,0 +1,26 @@
+  #general  aruzhan: Всем привет!
+    [активность] лидер: aruzhan
+  #study    daniyar: Кто сделал лабу по FRP?
+  #general  erlan: Привет, заходите в ******, тут ****
+    [фильтр] нарушение у erlan (всего 1)
+  #study    aruzhan: Я сделала, scan очень удобен
+    [пакет из 4] #general: 2, #study: 2
+  #random   erlan: Скидки, ******, бонусы
+    [фильтр] нарушение у erlan (всего 2)
+    [модератор] предупреждение: erlan — 2 нарушения
+  #general  erlan: Скидки, ******, бонусы
+    [фильтр] нарушение у erlan (всего 3)
+    [активность] лидер: erlan
+    [антиспам] кросспостинг: erlan в #random и #general
+  #study    daniyar: А как работает combine_latest?
+  #study    aruzhan: Он берёт последние значения обоих потоков
+    [активность] лидер: aruzhan
+    [пакет из 4] #general: 1, #random: 1, #study: 2
+  #general  dana: Не будь *******, Ерлан
+    [фильтр] нарушение у dana (всего 1)
+  #study    daniyar: Спасибо!
+  #study    aruzhan: Обращайся
+    [пакет из 4] #general: 1, #study: 2
+
+сообщений по каналам: #general: 4, #random: 1, #study: 6
+итог: 11 сообщений от 4 участников

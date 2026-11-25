@@ -1,0 +1,38 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/akbota/Desktop/универ/функ.програм/lab14
+configfile: pyproject.toml
+testpaths: tests
+plugins: returns-0.30.0, cov-7.1.0, hypothesis-6.170.17
+collected 145 items
+
+tests/test_bugs.py ........
+tests/test_classics.py .................................................
+.......................
+tests/test_gradebook.py ..........................................
+tests/test_libs.py ...............
+tests/test_properties.py ........
+
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.11.15-final-0 _______________
+
+Name                        Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------
+src/fpkit/__init__.py           0      0      0      0   100%
+src/fpkit/bugs.py              31      0     10      0   100%
+src/fpkit/classics.py          81      0     30      0   100%
+src/fpkit/result.py            26      0      0      0   100%
+src/fpkit/toolz_rating.py      40      0      6      0   100%
+src/fpkit/validation.py        55      0     14      0   100%
+src/gradebook/__init__.py       0      0      0      0   100%
+src/gradebook/cli.py           43      0     10      0   100%
+src/gradebook/config.py        33      0      8      0   100%
+src/gradebook/core.py          43      0      6      0   100%
+src/gradebook/model.py         33      0      0      0   100%
+src/gradebook/parsing.py       47      0     12      1    98%   69->65
+src/gradebook/pipeline.py      12      0      0      0   100%
+src/gradebook/report.py        35      0      2      0   100%
+src/gradebook/scale.py         33      0      8      0   100%
+-----------------------------------------------------------------------
+TOTAL                         512      0    106      1    99%
+============================= 145 passed in 5.28s ==============================

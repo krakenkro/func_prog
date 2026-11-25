@@ -1,0 +1,101 @@
+Metrics(files=1, sloc=137, functions=4, avg_cc=11.25, max_cc=16, worst='handle', mi=42.5, pure=0, state_changes=30, io_sites=13, mutable_globals=9)
+
+monitor_legacy.py: сложность функций (radon cc)
+  handle                   строка   60  CC = 16
+  main                     строка  106  CC = 16
+  process_line             строка   28  CC = 9
+  check_silence            строка   52  CC = 4
+monitor_legacy.py: признаки нечистоты (ast)
+  check_silence      53  глобальное изменяемое состояние: last_seen
+  check_silence      54  глобальное изменяемое состояние: down
+  check_silence      54  глобальное изменяемое состояние: last_seen
+  check_silence      55  глобальное изменяемое состояние: down
+  check_silence      55  мутирующий метод: .add()
+  check_silence      56  глобальное изменяемое состояние: alerts
+  check_silence      56  глобальное изменяемое состояние: last_seen
+  check_silence      56  мутирующий метод: .append()
+  handle             62  глобальное изменяемое состояние: down
+  handle             63  глобальное изменяемое состояние: down
+  handle             63  мутирующий метод: .remove()
+  handle             64  глобальное изменяемое состояние: alerts
+  handle             64  мутирующий метод: .append()
+  handle             65  глобальное изменяемое состояние: last_seen
+  handle             65  присваивание атрибуту/элементу: last_seen[server]
+  handle             67  глобальное изменяемое состояние: stats
+  handle             68  глобальное изменяемое состояние: stats
+  handle             68  присваивание атрибуту/элементу: stats[server]
+  handle             70  глобальное изменяемое состояние: stats
+  handle             70  присваивание атрибуту/элементу: stats[server]['n']
+  handle             71  глобальное изменяемое состояние: stats
+  handle             72  глобальное изменяемое состояние: stats
+  handle             72  присваивание атрибуту/элементу: stats[server]['cpu_max']
+  handle             73  глобальное изменяемое состояние: stats
+  handle             73  присваивание атрибуту/элементу: stats[server]['lat_sum']
+  handle             75  глобальное изменяемое состояние: cpu_window
+  handle             76  глобальное изменяемое состояние: cpu_window
+  handle             76  присваивание атрибуту/элементу: cpu_window[server]
+  handle             77  глобальное изменяемое состояние: cpu_window
+  handle             77  мутирующий метод: .append()
+  handle             78  глобальное изменяемое состояние: cpu_window
+  handle             79  глобальное изменяемое состояние: cpu_window
+  handle             79  мутирующий метод: .pop()
+  handle             80  глобальное изменяемое состояние: cpu_window
+  handle             81  глобальное изменяемое состояние: cpu_window
+  handle             82  глобальное изменяемое состояние: cpu_alarm
+  handle             83  глобальное изменяемое состояние: cpu_alarm
+  handle             83  присваивание атрибуту/элементу: cpu_alarm[server]
+  handle             84  глобальное изменяемое состояние: alerts
+  handle             84  мутирующий метод: .append()
+  handle             86  глобальное изменяемое состояние: cpu_alarm
+  handle             87  глобальное изменяемое состояние: cpu_alarm
+  handle             87  присваивание атрибуту/элементу: cpu_alarm[server]
+  handle             88  глобальное изменяемое состояние: alerts
+  handle             88  мутирующий метод: .append()
+  handle             92  глобальное изменяемое состояние: mem_last
+  handle             93  глобальное изменяемое состояние: mem_last
+  handle             93  присваивание атрибуту/элементу: mem_last[server]
+  handle             94  глобальное изменяемое состояние: alerts
+  handle             94  мутирующий метод: .append()
+  handle             98  глобальное изменяемое состояние: slow_count
+  handle             98  присваивание атрибуту/элементу: slow_count[server]
+  handle             99  глобальное изменяемое состояние: slow_count
+  handle            100  глобальное изменяемое состояние: alerts
+  handle            100  мутирующий метод: .append()
+  handle            103  глобальное изменяемое состояние: slow_count
+  handle            103  присваивание атрибуту/элементу: slow_count[server]
+  main              108  ввод-вывод: print()
+  main              114  ввод-вывод: open()
+  main              125  глобальное изменяемое состояние: errors
+  main              125  мутирующий метод: .append()
+  main              129  ввод-вывод: .close()
+  main              132  глобальное изменяемое состояние: alerts
+  main              132  мутирующий метод: .sort()
+  main              133  глобальное изменяемое состояние: errors
+  main              134  ввод-вывод: print()
+  main              135  глобальное изменяемое состояние: alerts
+  main              136  глобальное изменяемое состояние: stats
+  main              136  присваивание атрибуту/элементу: stats[a[1]]['alerts']
+  main              137  ввод-вывод: print()
+  main              138  ввод-вывод: print()
+  main              139  глобальное изменяемое состояние: stats
+  main              140  глобальное изменяемое состояние: stats
+  main              141  ввод-вывод: print()
+  main              144  ввод-вывод: print()
+  main              145  глобальное изменяемое состояние: alerts
+  main              145  глобальное изменяемое состояние: errors
+  main              147  ввод-вывод: open()
+  main              149  глобальное изменяемое состояние: alerts
+  main              150  присваивание атрибуту/элементу: counts[a[2]]
+  main              151  ввод-вывод: .write()
+  main              153  ввод-вывод: .write()
+  main              154  ввод-вывод: .close()
+  main              155  ввод-вывод: print()
+  process_line       29  global/nonlocal: errors
+  process_line       32  глобальное изменяемое состояние: errors
+  process_line       32  мутирующий метод: .append()
+  process_line       41  глобальное изменяемое состояние: errors
+  process_line       41  мутирующий метод: .append()
+  process_line       44  глобальное изменяемое состояние: errors
+  process_line       44  мутирующий метод: .append()
+  process_line       47  глобальное изменяемое состояние: errors
+  process_line       47  мутирующий метод: .append()

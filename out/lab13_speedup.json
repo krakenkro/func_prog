@@ -1,0 +1,110 @@
+{
+ "p": 0.8802283464303721,
+ "rows": [
+  {
+   "kind": "seq",
+   "workers": 1,
+   "chunksize": 0,
+   "seconds": 2.8509126660064794,
+   "primes": 92709
+  },
+  {
+   "kind": "thread",
+   "workers": 1,
+   "chunksize": 375000,
+   "seconds": 11.161468542006332,
+   "primes": 92709
+  },
+  {
+   "kind": "thread",
+   "workers": 2,
+   "chunksize": 187500,
+   "seconds": 10.548389249976026,
+   "primes": 92709
+  },
+  {
+   "kind": "thread",
+   "workers": 4,
+   "chunksize": 93750,
+   "seconds": 10.242489458003547,
+   "primes": 92709
+  },
+  {
+   "kind": "thread",
+   "workers": 8,
+   "chunksize": 46875,
+   "seconds": 10.916786916990532,
+   "primes": 92709
+  },
+  {
+   "kind": "process",
+   "workers": 1,
+   "chunksize": 375000,
+   "seconds": 3.106790124991676,
+   "primes": 92709
+  },
+  {
+   "kind": "process",
+   "workers": 2,
+   "chunksize": 187500,
+   "seconds": 1.5769865830079652,
+   "primes": 92709
+  },
+  {
+   "kind": "process",
+   "workers": 4,
+   "chunksize": 93750,
+   "seconds": 0.9421927919902373,
+   "primes": 92709
+  },
+  {
+   "kind": "process",
+   "workers": 8,
+   "chunksize": 46875,
+   "seconds": 0.7198060420050751,
+   "primes": 92709
+  },
+  {
+   "kind": "chunk",
+   "workers": 4,
+   "chunksize": 1,
+   "seconds": 8.820661624980858,
+   "primes": 9348
+  },
+  {
+   "kind": "chunk",
+   "workers": 4,
+   "chunksize": 10,
+   "seconds": 0.9087839999992866,
+   "primes": 9348
+  },
+  {
+   "kind": "chunk",
+   "workers": 4,
+   "chunksize": 100,
+   "seconds": 0.1960232499986887,
+   "primes": 9348
+  },
+  {
+   "kind": "chunk",
+   "workers": 4,
+   "chunksize": 1000,
+   "seconds": 0.16908987498027273,
+   "primes": 9348
+  },
+  {
+   "kind": "chunk",
+   "workers": 4,
+   "chunksize": 10000,
+   "seconds": 0.18018274998757988,
+   "primes": 9348
+  },
+  {
+   "kind": "chunk",
+   "workers": 4,
+   "chunksize": 37500,
+   "seconds": 0.2000959999859333,
+   "primes": 9348
+  }
+ ]
+}

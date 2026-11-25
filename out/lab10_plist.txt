@@ -1,0 +1,11 @@
+base = PList([3, 4, 5]) | xs = PList([2, 3, 4, 5]) | ys = PList([20, 3, 4, 5])
+xs и ys разделяют хвост base: True
+map x²: PList([1, 4, 9, 16, 25, 36, 49, 64, 81, 100])
+filter чётные: PList([2, 4, 6, 8, 10])
+fold_left (+): 55
+fold_right (строка): (1 (2 (3 nil)))
+reverse: PList([10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+take 3 / drop 7: PList([1, 2, 3]) PList([8, 9, 10])
+nth 4: 5 | length: 10
+append: PList([1, 2, 3, 4, 5]) | хвост b разделён: True
+исходный nums не изменился: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

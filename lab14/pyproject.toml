@@ -1,0 +1,41 @@
+[project]
+name = "lab14-gradebook"
+version = "1.0.0"
+requires-python = ">=3.11"
+dependencies = ["pyrsistent>=0.20", "returns>=0.22", "toolz>=0.12"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--import-mode=importlib -q"
+
+[tool.coverage.run]
+source = ["gradebook", "fpkit"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = ["pragma: no cover", "if __name__ == .__main__.:"]
+omit = ["*/__main__.py"]
+
+[tool.ruff]
+line-length = 79
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I"]
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "src"
+packages = ["gradebook", "fpkit"]
+plugins = ["returns.contrib.mypy.returns_plugin"]
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["toolz", "toolz.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["fpkit.toolz_rating"]
+warn_return_any = false

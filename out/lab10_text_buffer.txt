@@ -1,0 +1,52 @@
+--- после «переименование» ---
+def hello_world():
+    print('hi')
+--- после «новая строка» ---
+def hello_world():
+    print('hi')
+hello_world()
+--- после «текст print» ---
+def hello_world():
+    print('Привет, ФП!')
+hello_world()
+--- после «Enter» ---
+def hello_world():
+    print('Привет, ФП!')
+hello
+_world()
+
+--- после двух undo ---
+def hello_world():
+    print('hi')
+hello_world()
+--- после redo ---
+def hello_world():
+    print('Привет, ФП!')
+hello_world()
+--- новая правка после undo (redo очищен: True ) ---
+# новая ветка
+def hello_world():
+    print('hi')
+hello_world()
+
+Полная история версий:
+  v0  открытие                       2 стр.
+  v1  переименование                 2 стр.
+  v2  новая строка                   3 стр.
+  v3  текст print                    3 стр.
+  v4  Enter                          4 стр.
+  v5  undo «Enter»                   3 стр.
+  v6  undo «текст print»             3 стр.
+  v7  ветка: комментарий             4 стр.
+исходная версия v0 не изменилась: def hello():
+    print('hi')
+версия v4 доступна и после undo и новой ветки:
+def hello_world():
+    print('Привет, ФП!')
+hello
+_world()
+
+Производительность: 10000 строк, 2000 правок, все версии сохраняются
+Подход                        Время, с   Память, МБ
+наивное копирование list         0.080        152.7
+pvector + Editor                 0.086          2.0

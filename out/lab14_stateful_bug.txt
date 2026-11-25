@@ -1,0 +1,19 @@
+RuleBasedStateMachine (GradebookMachine), стратегия групп {G, H} —
+минимальная последовательность операций, найденная hypothesis:
+
+state = GradebookMachine()
+state.add(m=Mark(student='Асель', group='G', item='lab01', value=0.0, late=False))
+state.add(m=Mark(student='Асель', group='G', item='lab02', value=0.0, late=False))
+state.add(m=Mark(student='Асель', group='H', item='lab01', value=0.0, late=False))
+→ нарушен инвариант totals_valid: пересчёт с нуля даёт другую группу.
+
+Тот же дефект нашло свойство test_order_independent:
+ms = [Mark(student='Асель', group='H', item='lab01', value=0.0, late=False),
+      Mark(student='Асель', group='G', item='lab02', value=0.0, late=False)]
+replay(ms)       → {'Асель': Record(group='G', marks={lab01 (H), lab02 (G)})}
+replay(shuffled) → {'Асель': Record(group='H', marks={lab01 (H), lab02 (G)})}
+
+Причина: журнал индексировался только по имени студента, поэтому
+однофамильцы из разных групп сливались в одну запись (оценки смешивались,
+группа определялась последним событием). Исправление: ключ журнала —
+пара (группа, студент).
